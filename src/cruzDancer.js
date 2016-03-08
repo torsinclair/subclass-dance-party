@@ -16,7 +16,24 @@ makeCruzDancer.prototype.step = function(){
   // other effects you can use on a jQuery-wrapped html tag.
     
   //this.blinkyDancer.$node.toggle();
+
+  
+  
+
   
 
   this.$node.toggleClass("bounce");
 };
+
+makeCruzDancer.prototype.setPosition = function(top, left) {
+  // Use css top and left properties to position our <span> tag
+  // where it belongs on the page. See http://api.jquery.com/css/
+  //
+  var styleSettings = {
+    top: top - 500,
+    left: left - 500
+  };
+
+  this.$node.css(styleSettings);
+};
+

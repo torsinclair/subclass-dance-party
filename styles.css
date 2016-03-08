@@ -35,30 +35,28 @@ body, a:link, a:visited, a:active{
   background-color: #777;
 }
 .dancer{
-  border:10px solid red;
-  border-radius:10px;
-  position:absolute;
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  background-image: url("responsive.jpg");
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  -webkit-transition: background-color 2s ease-out;
+  -moz-transition: background-color 2s ease-out;
+  -o-transition: background-color 2s ease-out;
+  transition: background-color 2s ease-out;
 }
-.makeTrumpDancer{
-  width: 200px;
-  height: 260px;
-  position: relative;
-  perspective: 800px;
-}
-.rotate {
-  transform: rotateY( 180deg );
-}
-
 .bounce {
     position: absolute;
-    left: -100px;
-    width: 100px;
-    height: 100px;
+    left: -200px;
+    width: 200px;
+    height: 200px;
     background: blue;
-    -webkit-animation: spinnerRotate 0.5s forwards;
-    -webkit-animation-delay: 2s;
-    animation: spinnerRotate 0.5s forwards;
-    animation-delay: 2s;
+}
+.fadeout {
+
+
 }
 
 

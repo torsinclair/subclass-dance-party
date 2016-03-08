@@ -16,6 +16,7 @@ makeTrumpDancer.prototype.step = function(){
   // other effects you can use on a jQuery-wrapped html tag.
     
   //this.blinkyDancer.$node.toggle();
+  this.$node.css('responsive.jpg');
   
-  this.$node.toggleClass("rotate");
+  this.$node.toggleClass("bounce");
 };

@@ -64,5 +64,18 @@ makeDancer.prototype.setPosition = function(top, left) {
   this.$node.css(styleSettings);
 };
 
+makeDancer.prototype.move = function(top, left){
+  console.log(top);
+  console.log(left);
+
+
+  var styleSettings = {
+    top: top,
+    left: left
+  };
+  this.$node.css(styleSettings);
+};
+
+
 
 

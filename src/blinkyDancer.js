@@ -20,7 +20,7 @@ var makeBlinkyDancer = function(top, left, timeBetweenSteps) {
 };
 */
 
-var makeBlinkyDancer = function(top, left, timeBetweenSteps, danceStyle){
+var makeBlinkyDancer = function(top, left, timeBetweenSteps, danceStyle) {
   makeDancer.call(this, top, left, timeBetweenSteps, danceStyle);
   //this.step();
 };
@@ -28,7 +28,7 @@ var makeBlinkyDancer = function(top, left, timeBetweenSteps, danceStyle){
 makeBlinkyDancer.prototype = Object.create(makeDancer.prototype);
 makeBlinkyDancer.prototype.constructor = makeBlinkyDancer;
 
-makeBlinkyDancer.prototype.step = function(){
+makeBlinkyDancer.prototype.step = function() {
   // call the old version of step at the beginning of any call to this new version of step
   
   makeDancer.prototype.step.call(this);
@@ -40,5 +40,14 @@ makeBlinkyDancer.prototype.step = function(){
   // other effects you can use on a jQuery-wrapped html tag.
     
   //this.blinkyDancer.$node.toggle();
-  this.$node.toggle();
+  //console.log('hello');
+
+  console.log(this.$node.css('top'));
+
+
+
+  
+
+  
+  //this.$node.toggle();
 };
