@@ -20,7 +20,7 @@ body, a:link, a:visited, a:active{
       
   /* Set up positioning */
   position: fixed;
-  top: 0;
+  top: 40px;
   left: 0;
 }
 .title, .addDancerButton{
@@ -39,3 +39,21 @@ body, a:link, a:visited, a:active{
   border-radius:10px;
   position:absolute;
 }
+
+.bounce {
+    position: absolute;
+    left: -100px;
+    width: 100px;
+    height: 100px;
+    background: blue;
+    -webkit-animation: spinnerRotate 0.5s forwards;
+    -webkit-animation-delay: 2s;
+    animation: spinnerRotate 0.5s forwards;
+    animation-delay: 2s;
+}
+
+
+/*.bounce {
+  animation: bounce 1s .5s;
+  transform: scale(10.85);
+}*/
