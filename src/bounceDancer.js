@@ -16,5 +16,7 @@ makeBounceDancer.prototype.step = function(){
   // other effects you can use on a jQuery-wrapped html tag.
     
   //this.blinkyDancer.$node.toggle();
-  this.$node.toggle();
+  
+
+  // this.$node.toggle();
 };
