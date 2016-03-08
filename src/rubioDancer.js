@@ -1,12 +1,12 @@
-var makeScootDancer = function(top, left, timeBetweenSteps, danceStyle){
+var makeRubioDancer = function(top, left, timeBetweenSteps, danceStyle){
   makeDancer.call(this, top, left, timeBetweenSteps, danceStyle);
   //this.step();
 };
 
-makeScootDancer.prototype = Object.create(makeDancer.prototype);
-makeScootDancer.prototype.constructor = makeScootDancer;
+makeRubioDancer.prototype = Object.create(makeDancer.prototype);
+makeRubioDancer.prototype.constructor = makeRubioDancer;
 
-makeScootDancer.prototype.step = function(){
+makeRubioDancer.prototype.step = function(){
   // call the old version of step at the beginning of any call to this new version of step
   makeDancer.prototype.step.call(this);
   //this.step();
@@ -16,5 +16,7 @@ makeScootDancer.prototype.step = function(){
   // other effects you can use on a jQuery-wrapped html tag.
     
   //this.blinkyDancer.$node.toggle();
-  this.$node.toggle();
+  
+
+  this.$node.toggleClass("bounce");
 };

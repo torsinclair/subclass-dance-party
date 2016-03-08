@@ -4,7 +4,7 @@ var makeBounceDancer = function(top, left, timeBetweenSteps, danceStyle){
 };
 
 makeBounceDancer.prototype = Object.create(makeDancer.prototype);
-makeBounceDancer.prototype.constructor = makeBlinkyDancer;
+makeBounceDancer.prototype.constructor = makeBounceDancer;
 
 makeBounceDancer.prototype.step = function(){
   // call the old version of step at the beginning of any call to this new version of step

@@ -39,6 +39,15 @@ body, a:link, a:visited, a:active{
   border-radius:10px;
   position:absolute;
 }
+.makeTrumpDancer{
+  width: 200px;
+  height: 260px;
+  position: relative;
+  perspective: 800px;
+}
+.rotate {
+  transform: rotateY( 180deg );
+}
 
 .bounce {
     position: absolute;
