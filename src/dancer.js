@@ -53,7 +53,7 @@ makeDancer.prototype.step = function() {
   }, this.timer);
 };
 
-makeDancer.prototype.scoot = function(top, left){
+makeDancer.prototype.scoot = function(){
   // the basic dancer doesn't do anything interesting at all on each step,
   // it just schedules the next step
     
@@ -62,6 +62,17 @@ makeDancer.prototype.scoot = function(top, left){
   setTimeout(function() {
     that.step();
   }, this.timer);
+};
+
+makeDancer.prototype.bounce = function(){
+  // the basic dancer doesn't do anything interesting at all on each step,
+  // it just schedules the next step
+  var that = this;
+    
+  setTimeout(function() {
+    that.step();
+  }, this.timer);
+
 };
 
 makeDancer.prototype.setPosition = function(top, left) {
