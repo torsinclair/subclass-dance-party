@@ -20,13 +20,16 @@ var makeBlinkyDancer = function(top, left, timeBetweenSteps) {
 };
 */
 
-var makeBlinkyDancer = function(top, left, timeBetweenSteps, danceStyle) {
+var BlinkyDancer = function(top, left, timeBetweenSteps, danceStyle) {
   makeDancer.call(this, top, left, timeBetweenSteps, danceStyle);
   //this.step();
 };
 
-makeBlinkyDancer.prototype = Object.create(makeDancer.prototype);
-makeBlinkyDancer.prototype.constructor = makeBlinkyDancer;
+// BlinkyDancer.prototype = Dancer.prototype; //WRONG BECAUSE IT IS ASSIGNED AS THE SAME OBJECT, THUS OVERRIDE
+// BlinkyDancer.prototype = new Dancer; //WRONG BECAUSE new Dancer invokes a new object and will fail when that function needs variables
+
+BlinkyDancer.prototype = Object.create(makeDancer.prototype);
+BlinkyDancer.prototype.constructor = makeBlinkyDancer;
 
 makeBlinkyDancer.prototype.step = function() {
   // call the old version of step at the beginning of any call to this new version of step

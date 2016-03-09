@@ -1,55 +1,50 @@
+// Wait for the DOM to load
 $(document).ready(function() {
   window.dancers = [];
 
+  // Create New Dancers
   $('.addDancerButton').on('click', function(event) {
-    /* This function sets up the click handlers for the create-dancer
-     * buttons on dancefloor.html. You should only need to make one small change to it.
-     * As long as the "data-dancer-maker-function-name" attribute of a
-     * class="addDancerButton" DOM node matches one of the names of the
-     * maker functions available in the global scope, clicking that node
-     * will call the function to make the dancer.
-     */
 
-    /* dancerMakerFunctionName is a string which must match
-     * one of the dancer maker functions available in global scope.
-     * A new object of the given type will be created and added
-     * to the stage.
-     */
+    // Assign dancer-maker-function-name to the variable dancerMakerFunctionName
     var dancerMakerFunctionName = $(this).data('dancer-maker-function-name');
 
-    // get the maker function for the kind of dancer we're supposed to make
-    // dancerMakerFunction * random()...
+    // Assign the string dancerMakerFunctionName on the window object into the variable dancerMakerFunction
+    // This looks for a function that matches the dancerMakerFunction
     var dancerMakerFunction = window[dancerMakerFunctionName];
-
-    // make a dancer with a random position
-
     
     var dancer = new dancerMakerFunction(
       250,
       650,
       Math.random() * 1000, dancerMakerFunctionName
       );
-    /*
-    var dancer = new dancerMakerFunction(
-      $("body").height() * Math.random(),
-      $("body").width() * Math.random(),
-      Math.random() * 1000, dancerMakerFunctionName
-    );
-    */
 
-    window.dancers.push(dancer.$node);
+    // Push the dancer onto the array
+    window.dancers.push(dancer);
 
+    // Add the dancer to the DOM
     $('body').append(dancer.$node);
+  });
 
 
-    var lineUp = function(){
-      for(var i = 0; i < window.dancers.length; i++){
-        //makeDancer.prototype.setPosition.call(window.dancers[i], 250, 250);
-        console.log(window.dancers[i]);
-      }
-    };
+  // Line Up Dancers
+  $('.lineUp').on('click', function(event) {
 
+    var dancerMakerFunctionName = $(this).data('dancer-maker-function-names');
+
+    var dancerMakerFunction = window[dancerMakerFunctionName];
+
+    console.log('unwanted');
+    dancerMakerFunction();
 
   });
+
 });
 
+var lineUp = function(){
+      console.log('got here');
+      for(var i = 0; i < window.dancers.length; i++){
+        console.log(window.dancers[i]);
+        window.dancers[i].setPosition(250, 250);
+        //console.log(window.dancers[i]);
+      }
+};
