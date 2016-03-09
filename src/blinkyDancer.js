@@ -43,6 +43,9 @@ makeBlinkyDancer.prototype.step = function() {
   //console.log('hello');
 
   console.log(this.$node.css('top'));
+  console.log(this.$node.css('left'));
+
+  console.log(this.$node.top);
 
 
 
