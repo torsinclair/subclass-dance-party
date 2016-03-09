@@ -36,12 +36,14 @@ body, a:link, a:visited, a:active{
 }
 .dancer{
   position: absolute;
-  width: 150px;
-  height: 150px;
-  background-image: url("responsive.jpg");
-  margin-top: 20px;
+  width: 100px;
+  height: 100px;
+  background-image: url("src/assets/apples.jpeg");
+  background-size: 100px;
+  margin-top: 10px;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 10px;
   transition: all 0.5s ease;
   
 }
