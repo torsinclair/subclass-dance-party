@@ -1,7 +1,7 @@
 // Wait for the DOM to load
 $(document).ready(function() {
   window.dancers = [];
-
+g
   // Create New Dancers
   $('.addDancerButton').on('click', function(event) {
 
