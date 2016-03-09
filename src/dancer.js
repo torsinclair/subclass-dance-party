@@ -40,7 +40,7 @@ var makeDancer = function(top, left, timeBetweenSteps, danceStyle) {
   this.timer = timeBetweenSteps;
   this.step(this.timer);
   this.setPosition.call(this, top, left);
-  
+
 
 };
 

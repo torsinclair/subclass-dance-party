@@ -25,8 +25,8 @@ $(document).ready(function() {
 
     
     var dancer = new dancerMakerFunction(
-      400,
-      700,
+      250,
+      650,
       Math.random() * 1000, dancerMakerFunctionName
       );
     /*
@@ -40,6 +40,16 @@ $(document).ready(function() {
     window.dancers.push(dancer.$node);
 
     $('body').append(dancer.$node);
+
+
+    var lineUp = function(){
+      for(var i = 0; i < window.dancers.length; i++){
+        //makeDancer.prototype.setPosition.call(window.dancers[i], 250, 250);
+        console.log(window.dancers[i]);
+      }
+    };
+
+
   });
 });
 

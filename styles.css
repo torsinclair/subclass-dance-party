@@ -42,10 +42,8 @@ body, a:link, a:visited, a:active{
   margin-top: 20px;
   margin-left: auto;
   margin-right: auto;
-  -webkit-transition: background-color 2s ease-out;
-  -moz-transition: background-color 2s ease-out;
-  -o-transition: background-color 2s ease-out;
-  transition: background-color 2s ease-out;
+  transition: all 0.5s ease;
+  
 }
 .bounce {
     position: absolute;
@@ -53,6 +51,13 @@ body, a:link, a:visited, a:active{
     width: 200px;
     height: 200px;
     background: blue;
+}
+.rotate {
+  -webkit-transform: rotate(360deg);
+  -moz-transform: rotate(360deg);
+  -o-transform: rotate(360deg);
+  -ms-transform: rotate(360deg);
+  transform: rotate(360deg);
 }
 .fadeout {
 
